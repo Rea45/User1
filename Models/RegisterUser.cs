@@ -1,13 +1,10 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
 
-namespace User.Models.SignUp
+namespace User.Models
 {
     public class ApplicationUser : IdentityUser
     {
-        [Key]
-        public Guid Oid { get; set; }
-
         [Required]
         public string Login { get; set; }
 

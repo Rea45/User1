@@ -1,14 +1,14 @@
 using Microsoft.EntityFrameworkCore;
-using User.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using User.Contexts;
 
 var builder = WebApplication.CreateBuilder(args);
 // For entity framework
 var configuration = builder.Configuration;
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(configuration.GetConnectionString("Connstr")));
+    options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
 // Add services to the container.
 

@@ -7,6 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\Authentication\**" />
+    <Compile Remove="Models\LogIn\**" />
+    <Content Remove="Models\Authentication\**" />
+    <Content Remove="Models\LogIn\**" />
+    <EmbeddedResource Remove="Models\Authentication\**" />
+    <EmbeddedResource Remove="Models\LogIn\**" />
+    <None Remove="Models\Authentication\**" />
+    <None Remove="Models\LogIn\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.0" />
@@ -15,11 +26,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Models\Authentication\" />
-    <Folder Include="Models\LogIn\" />
   </ItemGroup>
 
 </Project>

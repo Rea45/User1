@@ -1,6 +1,6 @@
 ﻿namespace User.Models
 {
-    public class Response
+    public class BaseResponse
     {
         public string? Status { get; set; }
         public string? StatusMessage { get; set;}
